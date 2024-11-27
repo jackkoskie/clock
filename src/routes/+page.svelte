@@ -1,14 +1,82 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import { goto } from '$app/navigation';
+	import ColorPicker from 'svelte-awesome-color-picker';
 
 	let { data }: { data: PageData } = $props();
 
+	let twentyfour = $state(false);
+	let sec = $state(false);
+	let hex = $state('#1d232a');
+
+	if ($page.url.searchParams.get('24') === 'true') twentyfour = true;
+	if ($page.url.searchParams.get('sec') === 'true') sec = true;
+	if ($page.url.searchParams.get('hex')) hex = $page.url.searchParams.get('hex') as string;
+
+	let showMenu = $state(true);
+
+	const toggleHidden = () => {
+		showMenu = !showMenu;
+	};
+
+	const toggleTwentyFour = () => {
+		twentyfour = !twentyfour;
+
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('24', twentyfour.toString());
+		goto(`?${query.toString()}`);
+	};
+
+	const toggleSec = () => {
+		sec = !sec;
+		$page.url.searchParams.set('sec', sec.toString());
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('sec', sec.toString());
+		goto(`?${query.toString()}`);
+	};
+
+	$effect(() => {
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('hex', hex.toString());
+		goto(`?${query.toString()}`);
+	});
+
 	let time = $state(new Date());
+
 	let hours = $derived(time.getHours());
 	let minutes = $derived(time.getMinutes());
 	let seconds = $derived(time.getSeconds());
 	let ampm = $derived(hours >= 12 ? 'PM' : 'AM');
+
+	let text = $derived(
+		`${twentyfour ? (hours < 10 ? '0' + hours : hours) : hours > 12 ? hours - 12 : hours}:${minutes < 10 ? '0' + minutes : minutes}${sec ? ':' + (seconds < 10 ? '0' + seconds : seconds) : ''}${twentyfour ? '' : ' ' + ampm}`
+	);
+
+	const reset = () => {
+		twentyfour = false;
+		sec = false;
+		hex = '#1d232a';
+		showMenu = true;
+		goto('/');
+	};
+
+	const colorIsDark = (bgColor: string) => {
+		let color = bgColor.charAt(0) === '#' ? bgColor.substring(1, 7) : bgColor;
+		let r = parseInt(color.substring(0, 2), 16); // hexToR
+		let g = parseInt(color.substring(2, 4), 16); // hexToG
+		let b = parseInt(color.substring(4, 6), 16); // hexToB
+		let uicolors = [r / 255, g / 255, b / 255];
+		let c = uicolors.map((col) => {
+			if (col <= 0.03928) {
+				return col / 12.92;
+			}
+			return Math.pow((col + 0.055) / 1.055, 2.4);
+		});
+		let L = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+		return L <= 0.179;
+	};
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -19,17 +87,34 @@
 	});
 </script>
 
-<main class="container">
-	<div class="flex h-screen w-screen items-center justify-center text-center">
-		<div>
-			<h1 class="text-4xl font-bold text-white">Welcome to Clock</h1>
-			<h3 class="mb-4">Please select a clock option</h3>
-			<div class="join">
-				<a href="/12h" class="btn join-item">12h</a>
-				<a href="/12h/sec" class="btn join-item">12h Seconds</a>
-				<a href="/24h" class="btn join-item">24h</a>
-				<a href="/24h/sec" class="btn join-item">24h Seconds</a>
-			</div>
-		</div>
-	</div>
-</main>
+<div
+	class="join absolute left-4 top-4 rounded px-4 py-2 transition-opacity {showMenu
+		? ''
+		: 'opacity-0'} hover:opacity-100"
+>
+	<button onclick={toggleTwentyFour} class="btn join-item">{twentyfour ? '12h' : '24h'}</button>
+	<button onclick={toggleSec} class="btn join-item">{sec ? 'Hide Seconds' : 'Show Seconds'}</button>
+	<div class="dark btn join-item"><ColorPicker bind:hex position="responsive" /></div>
+	<button onclick={reset} class="btn join-item">Reset</button>
+	<button onclick={toggleHidden} class="btn join-item">
+		{showMenu ? 'Hide' : 'Show'} Menu
+	</button>
+</div>
+<div
+	class="flex h-screen w-screen items-center justify-center text-center"
+	style="background-color: {hex};"
+>
+	<h1 class="text- text-9xl font-bold text-{colorIsDark(hex) ? 'white' : 'black'}">
+		{text}
+	</h1>
+</div>
+
+<style>
+	.dark {
+		--cp-bg-color: #333;
+		/* --cp-border-color: white; */
+		/* --cp-text-color: white; */
+		--cp-input-color: #555;
+		/* --cp-button-hover-color: #777; */
+	}
+</style>
