@@ -96,7 +96,7 @@
 	<button onclick={toggleSec} class="btn join-item">{sec ? 'Hide Seconds' : 'Show Seconds'}</button>
 	<div class="dark btn join-item"><ColorPicker bind:hex position="responsive" /></div>
 	<button onclick={reset} class="btn join-item">Reset</button>
-	<a href="https://github.com/jackkoskie/clock" class="btn join-item">GitHub</a>
+	<a href="https://github.com/jackkoskie/clock" target="_blank" class="btn join-item">GitHub</a>
 	<button onclick={toggleHidden} class="btn join-item">
 		{showMenu ? 'Hide' : 'Show'} Menu
 	</button>
