@@ -105,7 +105,7 @@
 	class="flex h-screen w-screen items-center justify-center text-center"
 	style="background-color: {hex};"
 >
-	<h1 class="text- text-9xl font-bold text-{colorIsDark(hex) ? 'white' : 'black'}">
+	<h1 class="text- text-9xl font-bold {colorIsDark(hex) ? 'text-white' : 'text-black'}">
 		{text}
 	</h1>
 </div>
