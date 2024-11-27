@@ -10,15 +10,19 @@
 	let twentyfour = $state(false);
 	let sec = $state(false);
 	let hex = $state('#1d232a');
+	let showMenu = $state(true);
 
 	if ($page.url.searchParams.get('24') === 'true') twentyfour = true;
 	if ($page.url.searchParams.get('sec') === 'true') sec = true;
 	if ($page.url.searchParams.get('hex')) hex = $page.url.searchParams.get('hex') as string;
-
-	let showMenu = $state(true);
+	if ($page.url.searchParams.get('hide') === 'true') showMenu = false;
 
 	const toggleHidden = () => {
 		showMenu = !showMenu;
+
+		let query = new URLSearchParams($page.url.searchParams.toString());
+		query.set('hide', (!showMenu).toString());
+		goto(`?${query.toString()}`);
 	};
 
 	const toggleTwentyFour = () => {
@@ -82,6 +86,8 @@
 		const interval = setInterval(() => {
 			time = new Date();
 		}, 1000);
+
+		console.info('Welcome to the Clock!\n\nMade by Jack Koskie');
 
 		return () => clearInterval(interval);
 	});
