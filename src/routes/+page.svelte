@@ -42,6 +42,7 @@
 	};
 
 	$effect(() => {
+		if (hex === '#1d232a') return;
 		let query = new URLSearchParams($page.url.searchParams.toString());
 		query.set('hex', hex.toString());
 		goto(`?${query.toString()}`);
