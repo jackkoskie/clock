@@ -117,6 +117,17 @@
 	</h1>
 </div>
 
+{#if showMenu}
+	<footer class="footer footer-center bg-base-300 p-4 text-base-content">
+		<aside>
+			<p>
+				Copyright © {new Date().getFullYear()} -
+				<a href="https://koskie.ca" class="hover:link">Made by Jack Koskie</a>
+			</p>
+		</aside>
+	</footer>
+{/if}
+
 <style>
 	.dark {
 		--cp-bg-color: #333;
