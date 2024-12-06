@@ -86,7 +86,7 @@
 	onMount(() => {
 		const interval = setInterval(() => {
 			time = new Date();
-		}, 1000);
+		}, 250);
 
 		console.info('Welcome to the Clock!\n\nMade by Jack Koskie');
 
