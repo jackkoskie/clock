@@ -16,7 +16,7 @@ importers:
         version: 3.3.1(@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))
       '@sveltejs/adapter-cloudflare':
         specifier: ^4.7.4
-        version: 4.8.0(@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(wrangler@3.96.0(@cloudflare/workers-types@4.20241214.0))
+        version: 4.8.0(@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(wrangler@3.97.0(@cloudflare/workers-types@4.20241214.0))
       '@sveltejs/kit':
         specifier: ^2.0.0
         version: 2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2))
@@ -76,7 +76,7 @@ importers:
         version: 5.4.11(@types/node@22.10.2)
       wrangler:
         specifier: ^3.91.0
-        version: 3.96.0(@cloudflare/workers-types@4.20241214.0)
+        version: 3.97.0(@cloudflare/workers-types@4.20241214.0)
 
 packages:
 
@@ -990,6 +990,9 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  confbox@0.1.8:
+    resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
+
   cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
@@ -1424,6 +1427,9 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  mlly@1.7.3:
+    resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
+
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -1530,6 +1536,9 @@ packages:
   pirates@4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
+
+  pkg-types@1.2.1:
+    resolution: {integrity: sha512-sQoqa8alT3nHjGuTjuKgOnvjo4cljkufdtLMnO2LBP/wRwuDlo1tkaEdMxCRhyGRPacv/ztlZgDPm2b7FAmEvw==}
 
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
@@ -1901,8 +1910,8 @@ packages:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
     engines: {node: '>=14.0'}
 
-  unenv-nightly@2.0.0-20241204-140205-a5d5190:
-    resolution: {integrity: sha512-jpmAytLeiiW01pl5bhVn9wYJ4vtiLdhGe10oXlJBuQEX8mxjxO8BlEXGHU4vr4yEikjFP1wsomTHt/CLU8kUwg==}
+  unenv-nightly@2.0.0-20241212-153011-af71c96:
+    resolution: {integrity: sha512-Yugb9yPs/EZsPOY+IHloqVVEcZeJ0uwwViTedsZjOtVeYO8I29B1rzU/p84FMT0R1Ht3bHsKkNV/rzrjSd07QA==}
 
   update-browserslist-db@1.1.1:
     resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
@@ -1973,8 +1982,8 @@ packages:
     resolution: {integrity: sha512-+TvsA6VAVoMC3XDKR5MoC/qlLqDixEfOBysDEKnPIPou/NvoPWCAuXHXMsswwlvmEuvX56lQjvELLyLuzTKvRw==}
     engines: {node: '>=12'}
 
-  wrangler@3.96.0:
-    resolution: {integrity: sha512-KjbHTUnwTa5eKl3hzv2h6nHBfAsbUkdurL7f6Y288/Bdn6tcEis13jLVR/nw/eWa3tNCBG1xOMZJboUyzWcC1g==}
+  wrangler@3.97.0:
+    resolution: {integrity: sha512-NkFAigqZWe4NOK0gYROcpvdugaYJE/JRFrIZ+c5Q5/uie+25WH8OVbRvvmiXhWVhso56cZs2W2TPmAxT/sgHkw==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -2448,13 +2457,13 @@ snapshots:
       '@sveltejs/kit': 2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/adapter-cloudflare@4.8.0(@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(wrangler@3.96.0(@cloudflare/workers-types@4.20241214.0))':
+  '@sveltejs/adapter-cloudflare@4.8.0(@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(wrangler@3.97.0(@cloudflare/workers-types@4.20241214.0))':
     dependencies:
       '@cloudflare/workers-types': 4.20241214.0
       '@sveltejs/kit': 2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2))
       esbuild: 0.24.0
       worktop: 0.8.0-next.18
-      wrangler: 3.96.0(@cloudflare/workers-types@4.20241214.0)
+      wrangler: 3.97.0(@cloudflare/workers-types@4.20241214.0)
 
   '@sveltejs/kit@2.12.0(@sveltejs/vite-plugin-svelte@4.0.3(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2)))(svelte@5.14.2)(vite@5.4.11(@types/node@22.10.2))':
     dependencies:
@@ -2727,6 +2736,8 @@ snapshots:
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
+
+  confbox@0.1.8: {}
 
   cookie@0.6.0: {}
 
@@ -3216,6 +3227,13 @@ snapshots:
 
   minipass@7.1.2: {}
 
+  mlly@1.7.3:
+    dependencies:
+      acorn: 8.14.0
+      pathe: 1.1.2
+      pkg-types: 1.2.1
+      ufo: 1.5.4
+
   mri@1.2.0: {}
 
   mrmime@2.0.0: {}
@@ -3293,6 +3311,12 @@ snapshots:
   pify@2.3.0: {}
 
   pirates@4.0.6: {}
+
+  pkg-types@1.2.1:
+    dependencies:
+      confbox: 0.1.8
+      mlly: 1.7.3
+      pathe: 1.1.2
 
   postcss-import@15.1.0(postcss@8.4.49):
     dependencies:
@@ -3641,9 +3665,10 @@ snapshots:
     dependencies:
       '@fastify/busboy': 2.1.1
 
-  unenv-nightly@2.0.0-20241204-140205-a5d5190:
+  unenv-nightly@2.0.0-20241212-153011-af71c96:
     dependencies:
       defu: 6.1.4
+      mlly: 1.7.3
       ohash: 1.1.4
       pathe: 1.1.2
       ufo: 1.5.4
@@ -3692,7 +3717,7 @@ snapshots:
       mrmime: 2.0.0
       regexparam: 3.0.0
 
-  wrangler@3.96.0(@cloudflare/workers-types@4.20241214.0):
+  wrangler@3.97.0(@cloudflare/workers-types@4.20241214.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
@@ -3708,7 +3733,7 @@ snapshots:
       resolve: 1.22.9
       selfsigned: 2.4.1
       source-map: 0.6.1
-      unenv: unenv-nightly@2.0.0-20241204-140205-a5d5190
+      unenv: unenv-nightly@2.0.0-20241212-153011-af71c96
       workerd: 1.20241205.0
       xxhash-wasm: 1.1.0
     optionalDependencies:
