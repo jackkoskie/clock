@@ -4,6 +4,7 @@
 	import type { PageData } from './$types';
 	import { goto } from '$app/navigation';
 	import ColorPicker from 'svelte-awesome-color-picker';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -93,6 +94,12 @@
 		return () => clearInterval(interval);
 	});
 </script>
+
+<SEO
+	url="https://clock.koskie.ca"
+	siteName="Clock by Jack Koskie"
+	description="A simple clock utility with a number of customizations."
+/>
 
 <div
 	class="join absolute left-4 top-4 rounded px-4 py-2 transition-opacity {showMenu
