@@ -28,10 +28,10 @@ importers:
         version: 9.6.1
       autoprefixer:
         specifier: ^10.4.20
-        version: 10.4.21(postcss@8.4.49)
+        version: 10.4.21(postcss@8.5.3)
       daisyui:
         specifier: ^4.12.14
-        version: 4.12.24(postcss@8.4.49)
+        version: 4.12.24(postcss@8.5.3)
       eslint:
         specifier: ^9.7.0
         version: 9.29.0(jiti@1.21.7)
@@ -57,8 +57,8 @@ importers:
         specifier: ^5.0.0
         version: 5.34.7
       svelte-awesome-color-picker:
-        specifier: ^3.1.4
-        version: 3.1.4(svelte@5.34.7)
+        specifier: ^4.0.0
+        version: 4.0.2(svelte@5.34.7)
       svelte-check:
         specifier: ^4.0.0
         version: 4.2.2(svelte@5.34.7)(typescript@5.8.3)
@@ -1987,15 +1987,15 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-awesome-color-picker@3.1.4:
-    resolution: {integrity: sha512-tiFakxvSpCwodOSFW6CflnLVSldSlDY77rDipHfW7hvB+4gTP3y6uO+Dm9O9e7P5N7K+CNyNjjdjbZOHYkMyNQ==}
+  svelte-awesome-color-picker@4.0.2:
+    resolution: {integrity: sha512-Ez72goMMNmw6sZhB1/BXEA8984lEkudPrdlNS+y3nHm2Lnk1w4nwy5NFyWPxTP7nFnLxhIqyV3VuJVG4PokKwg==}
     peerDependencies:
-      svelte: ^3.55.1 || ^4.0.0 || ^5.0.0
+      svelte: ^5.0.0
 
-  svelte-awesome-slider@1.1.2:
-    resolution: {integrity: sha512-HFIWwq6rtX6aXyc6ns2R0P6pDLYIr6nRjTPyAddAiTAgZqsohAoEfOEwKKqMmZ6Q+CH48zzcFdyo6lFkBJvyQw==}
+  svelte-awesome-slider@2.0.0:
+    resolution: {integrity: sha512-YBkOdYm1Feaqsn2JkJBRs+Kc/X3Qy/3GuVmI7GmoYDjBaHkjx9uH4khTuED22z57Hg3gGWeDhp/clIjWDdLNaw==}
     peerDependencies:
-      svelte: ^3.54.0 || ^4.0.0 || ^5.0.0
+      svelte: ^5.0.0
 
   svelte-check@4.2.2:
     resolution: {integrity: sha512-1+31EOYZ7NKN0YDMKusav2hhEoA51GD9Ws6o//0SphMT0ve9mBTsTUEX7OmDMadUP3KjNHsSKtJrqdSaD8CrGQ==}
@@ -2935,14 +2935,14 @@ snapshots:
     dependencies:
       printable-characters: 1.0.42
 
-  autoprefixer@10.4.21(postcss@8.4.49):
+  autoprefixer@10.4.21(postcss@8.5.3):
     dependencies:
       browserslist: 4.24.4
       caniuse-lite: 1.0.30001702
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.4.49
+      postcss: 8.5.3
       postcss-value-parser: 4.2.0
 
   axobject-query@4.1.0: {}
@@ -3045,12 +3045,12 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.24(postcss@8.4.49):
+  daisyui@4.12.24(postcss@8.5.3):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
       picocolors: 1.1.1
-      postcss-js: 4.0.1(postcss@8.4.49)
+      postcss-js: 4.0.1(postcss@8.5.3)
     transitivePeerDependencies:
       - postcss
 
@@ -3608,6 +3608,11 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.49
 
+  postcss-js@4.0.1(postcss@8.5.3):
+    dependencies:
+      camelcase-css: 2.0.1
+      postcss: 8.5.3
+
   postcss-load-config@3.1.4(postcss@8.4.49):
     dependencies:
       lilconfig: 2.1.0
@@ -3848,13 +3853,13 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-awesome-color-picker@3.1.4(svelte@5.34.7):
+  svelte-awesome-color-picker@4.0.2(svelte@5.34.7):
     dependencies:
       colord: 2.9.3
       svelte: 5.34.7
-      svelte-awesome-slider: 1.1.2(svelte@5.34.7)
+      svelte-awesome-slider: 2.0.0(svelte@5.34.7)
 
-  svelte-awesome-slider@1.1.2(svelte@5.34.7):
+  svelte-awesome-slider@2.0.0(svelte@5.34.7):
     dependencies:
       svelte: 5.34.7
 
