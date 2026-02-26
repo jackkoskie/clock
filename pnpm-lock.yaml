@@ -57,8 +57,8 @@ importers:
         specifier: ^5.0.0
         version: 5.53.5
       svelte-awesome-color-picker:
-        specifier: ^3.1.4
-        version: 3.1.4(svelte@5.53.5)
+        specifier: ^4.0.0
+        version: 4.1.1(svelte@5.53.5)
       svelte-check:
         specifier: ^4.0.0
         version: 4.3.5(picomatch@4.0.3)(svelte@5.53.5)(typescript@5.9.3)
@@ -1961,15 +1961,16 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-awesome-color-picker@3.1.4:
-    resolution: {integrity: sha512-tiFakxvSpCwodOSFW6CflnLVSldSlDY77rDipHfW7hvB+4gTP3y6uO+Dm9O9e7P5N7K+CNyNjjdjbZOHYkMyNQ==}
+  svelte-awesome-color-picker@4.1.1:
+    resolution: {integrity: sha512-k4APFGBFN8EpvUS0UJfdlqj8xDekMbqGBwnDYBK1QCY8kcTXSO8c7SitEk70MkiYOIByOgXlHcjaipy6H7dpAw==}
+    engines: {node: '>=24'}
     peerDependencies:
-      svelte: ^3.55.1 || ^4.0.0 || ^5.0.0
+      svelte: ^5.0.0
 
-  svelte-awesome-slider@1.1.2:
-    resolution: {integrity: sha512-HFIWwq6rtX6aXyc6ns2R0P6pDLYIr6nRjTPyAddAiTAgZqsohAoEfOEwKKqMmZ6Q+CH48zzcFdyo6lFkBJvyQw==}
+  svelte-awesome-slider@2.0.0:
+    resolution: {integrity: sha512-YBkOdYm1Feaqsn2JkJBRs+Kc/X3Qy/3GuVmI7GmoYDjBaHkjx9uH4khTuED22z57Hg3gGWeDhp/clIjWDdLNaw==}
     peerDependencies:
-      svelte: ^3.54.0 || ^4.0.0 || ^5.0.0
+      svelte: ^5.0.0
 
   svelte-check@4.3.5:
     resolution: {integrity: sha512-e4VWZETyXaKGhpkxOXP+B/d0Fp/zKViZoJmneZWe/05Y2aqSKj3YN2nLfYPJBQ87WEiY4BQCQ9hWGu9mPT1a1Q==}
@@ -3741,13 +3742,13 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-awesome-color-picker@3.1.4(svelte@5.53.5):
+  svelte-awesome-color-picker@4.1.1(svelte@5.53.5):
     dependencies:
       colord: 2.9.3
       svelte: 5.53.5
-      svelte-awesome-slider: 1.1.2(svelte@5.53.5)
+      svelte-awesome-slider: 2.0.0(svelte@5.53.5)
 
-  svelte-awesome-slider@1.1.2(svelte@5.53.5):
+  svelte-awesome-slider@2.0.0(svelte@5.53.5):
     dependencies:
       svelte: 5.53.5
 
