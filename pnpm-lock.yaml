@@ -46,13 +46,13 @@ importers:
         version: 15.15.0
       prettier:
         specifier: ^3.3.2
-        version: 3.8.1
+        version: 3.9.9
       prettier-plugin-svelte:
         specifier: ^3.2.6
-        version: 3.5.2(prettier@3.8.1)(svelte@5.53.11)
+        version: 3.5.2(prettier@3.9.9)(svelte@5.53.11)
       prettier-plugin-tailwindcss:
         specifier: ^0.7.0
-        version: 0.7.2(prettier-plugin-svelte@3.5.2(prettier@3.8.1)(svelte@5.53.11))(prettier@3.8.1)
+        version: 0.7.2(prettier-plugin-svelte@3.5.2(prettier@3.9.9)(svelte@5.53.11))(prettier@3.9.9)
       svelte:
         specifier: ^5.0.0
         version: 5.53.11
@@ -1837,8 +1837,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3586,18 +3586,18 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-svelte@3.5.2(prettier@3.8.1)(svelte@5.53.11):
+  prettier-plugin-svelte@3.5.2(prettier@3.9.9)(svelte@5.53.11):
     dependencies:
-      prettier: 3.8.1
+      prettier: 3.9.9
       svelte: 5.53.11
 
-  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-svelte@3.5.2(prettier@3.8.1)(svelte@5.53.11))(prettier@3.8.1):
+  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-svelte@3.5.2(prettier@3.9.9)(svelte@5.53.11))(prettier@3.9.9):
     dependencies:
-      prettier: 3.8.1
+      prettier: 3.9.9
     optionalDependencies:
-      prettier-plugin-svelte: 3.5.2(prettier@3.8.1)(svelte@5.53.11)
+      prettier-plugin-svelte: 3.5.2(prettier@3.9.9)(svelte@5.53.11)
 
-  prettier@3.8.1: {}
+  prettier@3.9.9: {}
 
   printable-characters@1.0.42: {}
 
